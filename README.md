@@ -48,7 +48,14 @@ The `lastcommand` binary simply holds data and moves it around, it would be easy
 ```
 preexec
 
-    Executed just after a command has been read and is about to be executed. If the history mechanism is active (regardless of whether the line was discarded from the history buffer), the string that the user typed is passed as the first argument, otherwise it is an empty string. The actual command that will be executed (including expanded aliases) is passed in two different forms: the second argument is a single-line, size-limited version of the command (with things like function bodies elided); the third argument contains the full text that is being executed. 
+    Executed just after a command has been read and is about to be executed.
+If the history mechanism is active (regardless of whether the line was discarded
+from the history buffer), the string that the user typed is passed as the first
+argument, otherwise it is an empty string. The actual command that will be
+executed (including expanded aliases) is passed in two different forms: the second
+argument is a single-line, size-limited version of the command (with things like
+function bodies elided); the third argument contains the full text that is being
+executed. 
 ```
 
 ### preexec functions
