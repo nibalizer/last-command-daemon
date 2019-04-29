@@ -35,8 +35,12 @@ Loaded last-command hook. preexec function overloaded
 
 This works by using a zsh hook called `preexec`. For that reason it doesn't work with bash. I've not tested it, but [this repository](https://github.com/rcaloras/bash-preexec) claims to add similar functionality to bash.
 
-The `lastcommand` binary simply holds data and moves it around, it would be easy to implement this in any number of ways, including just overwriting a text file and using a text source in OBS.
+The `lastcommand` binary simply holds the most recent invocation and presents it over htm:w
+ it would be easy to implement this in any number of ways, including just overwriting a text file and using a text source in OBS.
 
+### Security
+
+I am not resopnsible for your security. If you leak a password on twitch, either with this tool or a different tool, that's on you. This pipeline will expand aliases but not variables. i.e. if you run commands like `./doit -p $PASSWORD` then the audience will not see the expanded variable, only the string `$PASSWORD`.
 
 ### Links:
 
